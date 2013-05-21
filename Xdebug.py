@@ -398,7 +398,7 @@ class XdebugCommand(sublime_plugin.TextCommand):
         if protocol and command == 'xdebug_listen':
             url = get_project_setting('url')
             if url:
-                webbrowser.get('/usr/bin/chromium-browser %s').open(url + '?XDEBUG_SESSION_START=sublime.xdebug')
+                webbrowser.get('/usr/bin/chromium-browser').open(url + '?XDEBUG_SESSION_START=sublime.xdebug')
             else:
                 sublime.status_message('Xdebug: No URL defined in project settings file.')
 
